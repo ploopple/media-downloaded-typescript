@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>His</h1>
+    <input type="text" id="url-input" />
+    <button onclick="handleOnDownloadClick()">Download</button>
+    <script>
+      const handleOnDownloadClick = async () => {
+        const i = document
+          .getElementById("url-input")
+          .value.replace("https://youtu.be/", "");
+        window.location.href = `http://localhost:4000/api/download/${i}`;
+      };
+    </script>
+  </body>
+</html>
