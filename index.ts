@@ -18,6 +18,10 @@ app.get("/api/download/:url", (req, res) => {
   }).pipe(res);
 });
 
+app.get("/api/hello", (req, res) => {
+  res.send("hi");
+});
+
 app.listen(4000, () => {
   console.log("Server Works !!! At port 4000");
 });
