@@ -4,6 +4,7 @@ import ytdl from "ytdl-core";
 const fs = require("fs");
 
 const app = express();
+const port = 3333;
 
 // app.use(express.json());
 
@@ -22,6 +23,6 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 
-app.listen(4000, () => {
-  console.log("Server Works !!! At port 4000");
+app.listen(port, () => {
+  console.log("Server Works !!! At port 3333");
 });
