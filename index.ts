@@ -18,7 +18,7 @@ app.get("/api/download/:url", (req, res) => {
   }).pipe(res);
 });
 
-app.get("/api/hello", (req, res) => {
+app.get("/", (req, res) => {
   res.send("hi");
 });
 
