@@ -8,9 +8,9 @@ const ytdl_core_1 = __importDefault(require("ytdl-core"));
 const fs = require("fs");
 const app = (0, express_1.default)();
 // app.use(express.json());
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(__dirname + "/index.html");
+// });
 app.get("/api/download/:url", (req, res) => {
     res.header("Content-Disposition", 'attachment; filename="video.mp4"');
     (0, ytdl_core_1.default)(req.params.url, {

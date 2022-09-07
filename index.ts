@@ -7,9 +7,9 @@ const app = express();
 
 // app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(__dirname + "/index.html");
+// });
 app.get("/api/download/:url", (req, res) => {
   res.header("Content-Disposition", 'attachment; filename="video.mp4"');
   ytdl(req.params.url, {
